@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${jetbrainsMono.variable} ${spaceGrotesk.variable}`}
     >
       <body>{children}</body>
