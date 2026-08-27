@@ -4,7 +4,7 @@ import { data } from '@/lib/data';
 export function Education() {
   return (
     <div className="mt-14">
-      <SectionHeading eyebrow="/ / pendidikan" title="" />
+      <SectionHeading eyebrow="/ / pendidikan" />
       <div className="flex flex-col">
         {data.education.map((e) => (
           <div key={e.school} className="flex gap-6 py-5 border-b-[1.5px] border-ink/15">

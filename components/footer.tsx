@@ -10,7 +10,7 @@ export function Footer() {
       <div className="max-w-[1100px] mx-auto flex justify-between gap-8 flex-wrap">
         <div className="max-w-[360px]">
           <div className="font-extrabold text-lg mb-2">
-            raka@portfolio<span className="text-accent-green">:~$</span> echo &quot;let&apos;s build something&quot;
+            {profile.handle}@portfolio<span className="text-accent-green">:~$</span> echo &quot;let&apos;s build something&quot;
           </div>
           <div className="text-sm opacity-70 leading-relaxed">{footer.tagline}</div>
         </div>

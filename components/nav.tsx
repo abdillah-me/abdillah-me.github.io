@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { isActiveLink } from '@/lib/is-active-link';
+import { data } from '@/lib/data';
 
 const LINKS = [
   { href: '/', label: 'home' },
@@ -13,13 +14,14 @@ const LINKS = [
 
 export function Nav() {
   const pathname = usePathname();
+  const { profile } = data;
 
   return (
-    <div className="sticky top-0 z-50 bg-cream border-b-2 border-ink font-mono">
+    <nav className="sticky top-0 z-50 bg-cream border-b-2 border-ink font-mono">
       <div className="max-w-[1100px] mx-auto px-6 py-3.5 flex items-center justify-between gap-4 flex-wrap">
         <Link href="/" className="flex items-center gap-2 font-extrabold text-base hover:text-accent-green transition-colors">
           <span className="w-2.5 h-2.5 rounded-sm bg-accent-green inline-block" />
-          raka@portfolio<span className="text-accent-green">:~$</span>
+          {profile.handle}@portfolio<span className="text-accent-green">:~$</span>
         </Link>
         <div className="flex gap-1 flex-wrap text-sm">
           {LINKS.map((item) => {
@@ -28,6 +30,7 @@ export function Nav() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? 'page' : undefined}
                 className={`no-underline px-3 py-1.5 rounded-md font-semibold transition-colors ${
                   active ? 'bg-ink text-cream font-bold' : 'text-ink hover:bg-cream-dim'
                 }`}
@@ -38,6 +41,6 @@ export function Nav() {
           })}
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

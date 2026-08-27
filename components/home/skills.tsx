@@ -8,7 +8,7 @@ export function Skills() {
 
   return (
     <div className="mt-18">
-      <SectionHeading eyebrow="/ / keahlian teknis" title="" />
+      <SectionHeading eyebrow="/ / keahlian teknis" />
       <div className="grid sm:grid-cols-2 gap-5">
         {skills.groups.map((group) => (
           <div key={group.title} className="bg-white border-2 border-ink rounded-lg p-5.5">
