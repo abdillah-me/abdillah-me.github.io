@@ -16,7 +16,7 @@ export function Footer() {
         </div>
         <div className="flex gap-12 flex-wrap">
           <div>
-            <div className="text-[11px] opacity-50 tracking-[0.08em] mb-2.5">// navigate</div>
+            <div className="text-[11px] opacity-50 tracking-[0.08em] mb-2.5">{'// navigate'}</div>
             <div className="flex flex-col gap-1.5 text-sm">
               <Link href="/" className="opacity-85 hover:opacity-100 hover:text-accent-green transition-colors">home</Link>
               <Link href="/work" className="opacity-85 hover:opacity-100 hover:text-accent-green transition-colors">work</Link>
@@ -24,7 +24,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <div className="text-[11px] opacity-50 tracking-[0.08em] mb-2.5">// connect</div>
+            <div className="text-[11px] opacity-50 tracking-[0.08em] mb-2.5">{'// connect'}</div>
             <div className="flex flex-col gap-1.5 text-sm">
               <a href={footer.socialLinks.github} target="_blank" rel="noopener" className="opacity-85 hover:opacity-100 hover:text-accent-green transition-colors">github</a>
               <a href={footer.socialLinks.linkedin} target="_blank" rel="noopener" className="opacity-85 hover:opacity-100 hover:text-accent-green transition-colors">linkedin</a>
