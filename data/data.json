@@ -1,6 +1,7 @@
 {
   "profile": {
     "name": "Raka Pratama",
+    "handle": "raka",
     "role": "Software Engineer",
     "tagline": "Software engineer fullstack yang senang mengubah ide berantakan jadi produk yang jalan. Fokus di web, mobile, dan otomasi berbasis AI.",
     "location": "Jakarta, Indonesia (remote-friendly)",
@@ -163,12 +164,15 @@
       "email": "hello@rakapratama.dev"
     }
   },
+  "contact": {
+    "intro": "Terbuka untuk kolaborasi, proyek freelance, atau ngobrol soal ide baru. Balas biasanya dalam 1–2 hari kerja."
+  },
   "seo": {
     "siteName": "Raka Pratama — Portfolio",
     "siteUrl": "https://rakapratama.dev",
     "defaultTitle": "Raka Pratama — Software Engineer",
     "defaultDescription": "Software engineer fullstack berbasis di Jakarta, fokus di web, mobile, dan otomasi berbasis AI.",
-    "ogImage": "/images/og-image.png",
+    "ogImage": "/images/og-image.svg",
     "twitterHandle": "@rakapratama",
     "locale": "id_ID",
     "keywords": ["software engineer", "fullstack developer", "react developer", "next.js developer", "jakarta", "portfolio"]

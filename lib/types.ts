@@ -1,5 +1,6 @@
 export interface Profile {
   name: string;
+  handle: string;
   role: string;
   tagline: string;
   location: string;
@@ -74,6 +75,10 @@ export interface FooterData {
   socialLinks: { github: string; linkedin: string; email: string };
 }
 
+export interface ContactContent {
+  intro: string;
+}
+
 export interface SeoData {
   siteName: string;
   siteUrl: string;
@@ -96,5 +101,6 @@ export interface PortfolioData {
   blog: BlogPost[];
   testimonials: Testimonial[];
   footer: FooterData;
+  contact: ContactContent;
   seo: SeoData;
 }
