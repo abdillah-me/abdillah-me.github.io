@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#f4f1ea">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" fill="#f4f1ea"></rect>
+    <rect x="20" y="40" width="80" height="50" rx="6" fill="#2b2a26"></rect>
+    <circle cx="32" cy="52" r="3" fill="#ff5f56"></circle>
+    <circle cx="42" cy="52" r="3" fill="#ffbd2e"></circle>
+    <circle cx="52" cy="52" r="3" fill="#27c93f"></circle>
+    <text x="60" y="76" font-family="monospace" font-size="10" fill="#8fe3b0" text-anchor="middle">raka@$</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:oklch(97% 0.015 85)}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  @keyframes bounce-y{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</helmet>
+<div style="font-family:'Space Grotesk',sans-serif;color:oklch(20% 0.02 85);min-height:100vh;overflow-x:hidden">
+  <dc-import name="Nav" active="home" hint-size="100%,56px"></dc-import>
+
+  <div style="position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:oklch(97% 0.015 85)">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(oklch(85% 0.02 85) 1.5px, transparent 1.5px);background-size:28px 28px;transform:translateY({{ parallaxSlow }}px);opacity:0.7;pointer-events:none"></div>
+    <svg viewBox="0 0 24 24" style="position:absolute;top:14%;left:6%;width:34px;height:34px;transform:translateY({{ parallaxFast }}px) rotate({{ scrollRotate }}deg);opacity:0.9;pointer-events:none">
+      <path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="oklch(70% 0.15 55)"></path>
+    </svg>
+    <div style="position:absolute;bottom:18%;right:8%;width:70px;height:70px;border:3px dashed oklch(55% 0.15 150);border-radius:50%;transform:translateY({{ parallaxMed }}px) rotate({{ scrollRotateRev }}deg);opacity:0.8;pointer-events:none"></div>
+    <div style="position:absolute;top:32%;right:16%;width:14px;height:14px;background:oklch(70% 0.15 55);border-radius:3px;transform:translateY({{ parallaxFast }}px) rotate(20deg);opacity:0.7;pointer-events:none"></div>
+
+    <div style="position:relative;max-width:1100px;margin:0 auto;padding:0 24px;width:100%;box-sizing:border-box">
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center">
+        <div style="opacity:{{ heroOpacity }};transform:translateY({{ heroTranslate }}px);transition:opacity 0.8s ease,transform 0.8s ease">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:oklch(90% 0.06 150);border:1.5px solid oklch(20% 0.02 85);border-radius:20px;padding:5px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;margin-bottom:20px">
+            <span style="width:7px;height:7px;border-radius:50%;background:oklch(55% 0.15 150);animation:blink 1.6s ease-in-out infinite"></span>
+            open to kolaborasi & full-time
+          </div>
+          <h1 style="font-size:clamp(44px,6vw,72px);line-height:1.02;font-weight:700;margin:0 0 20px;letter-spacing:-0.03em;position:relative">
+            Halo, saya<br>
+            <span style="position:relative;display:inline-block;color:oklch(20% 0.02 85)">Raka Pratama
+              <svg viewBox="0 0 260 16" style="position:absolute;left:0;bottom:-8px;width:100%;height:16px" preserveAspectRatio="none">
+                <path d="M2 9 Q 40 2, 80 9 T 160 9 T 258 7" fill="none" stroke="oklch(70% 0.15 55)" stroke-width="5" stroke-linecap="round"></path>
+              </svg>
+            </span>
+          </h1>
+          <p style="font-size:19px;line-height:1.6;color:oklch(35% 0.02 85);max-width:520px;margin:0 0 28px">
+            Software engineer fullstack yang senang mengubah ide berantakan jadi produk yang jalan. Fokus di web, mobile, dan otomasi berbasis AI.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="./Work.dc.html" style="text-decoration:none;background:oklch(20% 0.02 85);color:oklch(97% 0.015 85);font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;padding:14px 22px;border-radius:8px;display:inline-block;transition:transform 0.15s" style-hover="background:oklch(55% 0.15 150);transform:translateY(-2px)" style-active="transform:translateY(0px)">./lihat-proyek.sh</a>
+            <a href="./Contact.dc.html" style="text-decoration:none;background:transparent;color:oklch(20% 0.02 85);font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;padding:14px 22px;border-radius:8px;border:2px solid oklch(20% 0.02 85);display:inline-block;transition:transform 0.15s" style-hover="background:oklch(90% 0.03 85);transform:translateY(-2px)" style-active="transform:translateY(0px)">say hello --wave</a>
+          </div>
+        </div>
+
+        <div style="position:relative;opacity:{{ heroOpacity }};transform:translateY({{ heroTranslate }}px) translateY({{ parallaxMed }}px);transition:opacity 0.8s ease 0.15s,transform 0.8s ease 0.15s" onMouseMove="{{ onTermMove }}" onMouseLeave="{{ onTermLeave }}">
+          <div style="position:absolute;inset:-14px;border:2px dashed oklch(70% 0.15 55);border-radius:16px;animation:spin-slow 40s linear infinite;pointer-events:none"></div>
+          <div style="background:oklch(20% 0.02 85);border-radius:12px;overflow:hidden;box-shadow:8px 8px 0 oklch(70% 0.15 55);position:relative;animation:floaty 5s ease-in-out infinite;transform:perspective(800px) rotateX({{ tiltX }}deg) rotateY({{ tiltY }}deg);transition:transform 0.1s ease-out">
+            <div style="display:flex;align-items:center;gap:6px;padding:10px 14px;background:oklch(15% 0.02 85)">
+              <span style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#27c93f"></span>
+              <span style="margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(70% 0.02 85)">whoami.sh</span>
+            </div>
+            <div style="padding:22px 20px 26px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.9;color:oklch(90% 0.03 150);min-height:190px">
+              <sc-for list="{{ termLines }}" as="ln" hint-placeholder-count="4">
+                <div style="margin-top:{{ ln.mt }};color:{{ ln.color }}"><span style="color:oklch(70% 0.15 55)">{{ ln.prefix }}</span>{{ ln.text }}<sc-if value="{{ ln.showCursor }}" hint-placeholder-val="{{ false }}"><span style="animation:blink 1s step-start infinite">▌</span></sc-if></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(45% 0.02 85);opacity:{{ scrollCueOpacity }};transition:opacity 0.3s">
+      <span>scroll</span>
+      <div style="width:20px;height:32px;border:2px solid oklch(45% 0.02 85);border-radius:12px;display:flex;justify-content:center;padding-top:5px">
+        <div style="width:4px;height:8px;background:oklch(45% 0.02 85);border-radius:2px;animation:bounce-y 1.4s ease-in-out infinite"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:2px solid oklch(20% 0.02 85);border-bottom:2px solid oklch(20% 0.02 85);background:oklch(93% 0.02 85);padding:16px 0;overflow:hidden">
+    <div style="display:flex;width:max-content;animation:marquee 26s linear infinite;gap:0">
+      <sc-for list="{{ marqueeItems }}" as="m" hint-placeholder-count="20">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;padding:0 22px;white-space:nowrap;color:oklch(30% 0.02 85);border-right:1.5px solid oklch(75% 0.02 85)">{{ m }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:64px 24px 0;width:100%;box-sizing:border-box">
+    <div data-section="stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;opacity:{{ statsOpacity }};transform:translateY({{ statsTransform }}px);transition:opacity 0.6s ease,transform 0.6s ease">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+        <div style="background:oklch(99% 0.01 85);border:2px solid oklch(20% 0.02 85);border-radius:10px;padding:20px;transition:transform 0.2s" style-hover="transform:translateY(-3px)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:800;color:oklch(45% 0.14 150)">{{ s.display }}</div>
+          <div style="font-size:14px;color:oklch(35% 0.02 85);margin-top:4px">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div id="about" style="margin-top:88px;scroll-margin-top:80px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:oklch(45% 0.14 150);margin-bottom:8px">$ cat about.md</div>
+      <h2 style="font-size:36px;font-weight:700;margin:0 0 32px;letter-spacing:-0.02em">Tentang saya</h2>
+      <div data-section="about" style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:40px;align-items:start;opacity:{{ aboutOpacity }};transform:translateY({{ aboutTransform }}px);transition:opacity 0.6s ease,transform 0.6s ease">
+        <div style="background:oklch(20% 0.02 85);border-radius:12px;overflow:hidden;box-shadow:6px 6px 0 oklch(70% 0.16 150)">
+          <div style="display:flex;align-items:center;gap:6px;padding:10px 14px;background:oklch(15% 0.02 85)">
+            <span style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#27c93f"></span>
+          </div>
+          <div style="aspect-ratio:1/1;background:repeating-linear-gradient(135deg, oklch(30% 0.02 85), oklch(30% 0.02 85) 10px, oklch(25% 0.02 85) 10px, oklch(25% 0.02 85) 20px);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:oklch(80% 0.02 85)">foto profil</div>
+        </div>
+        <div style="font-size:16px;line-height:1.85;color:oklch(30% 0.02 85)">
+          <p>Saya Raka, software engineer yang mulai belajar coding dari mengutak-atik forum game waktu SMA — dan sampai sekarang belum berhenti penasaran. Sekarang fokus membangun produk web & mobile yang cepat, rapi, dan enak dipakai.</p>
+          <p>Beberapa tahun terakhir banyak berkutat dengan sistem yang harus scale, integrasi API yang berantakan, dan belakangan mulai serius eksplorasi automasi berbasis AI untuk mempercepat kerja tim.</p>
+          <p>Di luar layar: ngopi, baca komik, dan sesekali nulis di blog soal hal-hal teknis yang baru dipelajari.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+            <sc-for list="{{ traits }}" as="t" hint-placeholder-count="4">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:12px;background:oklch(90% 0.06 150);border:1.5px solid oklch(20% 0.02 85);border-radius:20px;padding:6px 14px;font-weight:600">{{ t }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:72px">
+      <h2 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.08em;color:oklch(35% 0.02 85);text-transform:uppercase;margin:0 0 24px">/ / keahlian teknis</h2>
+      <div data-section="skills" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;opacity:{{ skillsOpacity }};transform:translateY({{ skillsTransform }}px);transition:opacity 0.6s ease,transform 0.6s ease">
+        <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="4">
+          <div style="background:oklch(99% 0.01 85);border:2px solid oklch(20% 0.02 85);border-radius:10px;padding:22px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+              <span style="width:8px;height:8px;border-radius:2px;background:{{ g.color }}"></span>
+              <div style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px">{{ g.title }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="4">
+                <div>
+                  <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:5px">
+                    <span style="font-weight:600">{{ s.name }}</span>
+                    <span style="font-family:'JetBrains Mono',monospace;color:oklch(40% 0.02 85)">{{ s.levelLabel }}</span>
+                  </div>
+                  <div style="height:6px;border-radius:3px;background:oklch(90% 0.02 85);overflow:hidden">
+                    <div style="height:100%;width:{{ s.levelPctLive }};background:{{ g.color }};border-radius:3px;transition:width 1s ease"></div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+        <sc-for list="{{ tools }}" as="t" hint-placeholder-count="10">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;background:oklch(93% 0.02 85);border-radius:8px;padding:8px 14px;font-weight:600">{{ t }}</span>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-top:56px">
+      <h2 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.08em;color:oklch(35% 0.02 85);text-transform:uppercase;margin:0 0 24px">/ / pendidikan</h2>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <sc-for list="{{ education }}" as="e" hint-placeholder-count="2">
+          <div style="display:flex;gap:24px;padding:20px 0;border-bottom:1.5px solid oklch(85% 0.02 85)">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:oklch(45% 0.14 150);width:110px;flex-shrink:0;font-weight:700">{{ e.year }}</div>
+            <div>
+              <div style="font-weight:700;font-size:17px">{{ e.school }}</div>
+              <div style="font-size:14px;color:oklch(40% 0.02 85);margin-top:2px">{{ e.degree }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="margin-top:72px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <h2 style="font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.08em;color:oklch(35% 0.02 85);text-transform:uppercase;margin:0">/ / kerja terbaru</h2>
+      <a href="./Work.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;text-decoration:none;color:oklch(45% 0.14 150)">lihat semua →</a>
+    </div>
+    <div data-section="featured" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px;padding-bottom:80px;opacity:{{ featuredOpacity }};transform:translateY({{ featuredTransform }}px);transition:opacity 0.6s ease,transform 0.6s ease">
+      <sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
+        <a href="./Work.dc.html" style="text-decoration:none;color:inherit;background:oklch(99% 0.01 85);border:2px solid oklch(20% 0.02 85);border-radius:10px;overflow:hidden;display:block;transition:transform 0.2s,box-shadow 0.2s" style-hover="transform:translateY(-5px);box-shadow:6px 6px 0 oklch(70% 0.15 55)">
+          <div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg, oklch(90% 0.03 85), oklch(90% 0.03 85) 10px, oklch(93% 0.02 85) 10px, oklch(93% 0.02 85) 20px);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:oklch(45% 0.02 85)">screenshot proyek</div>
+          <div style="padding:16px">
+            <div style="font-weight:700;font-size:15px;margin-bottom:6px">{{ p.name }}</div>
+            <div style="font-size:13px;color:oklch(40% 0.02 85);line-height:1.5">{{ p.desc }}</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+
+  <dc-import name="Footer" hint-size="100%,240px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    lineIndex: 0, charIndex: 0,
+    revealed: { stats: false, about: false, skills: false, featured: false },
+    statsN: [0, 0, 0],
+    scrollY: 0,
+    tiltX: 0, tiltY: 0,
+    heroIn: false,
+  };
+
+  linesData() {
+    return [
+      { prefix: '$ ', full: 'whoami', color: 'oklch(97% 0.01 85)' },
+      { prefix: '', full: 'Raka Pratama — Software Engineer', color: 'oklch(97% 0.01 85)' },
+      { prefix: '$ ', full: 'stack --primary', color: 'oklch(97% 0.01 85)' },
+      { prefix: '', full: 'TypeScript · React · Node.js · Python', color: 'oklch(97% 0.01 85)' },
+      { prefix: '$ ', full: 'location', color: 'oklch(97% 0.01 85)' },
+      { prefix: '', full: 'Jakarta, Indonesia (remote-friendly)', color: 'oklch(97% 0.01 85)' },
+      { prefix: '$ ', full: 'status', color: 'oklch(97% 0.01 85)' },
+    ];
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ heroIn: true }), 60);
+
+    this._onScroll = () => {
+      this.setState({ scrollY: window.scrollY });
+      const vh = window.innerHeight;
+      const checks = { stats: 0.9, about: 0.85, skills: 0.85, featured: 0.85 };
+      let anyChange = false;
+      const next = { ...this.state.revealed };
+      Object.keys(checks).forEach(key => {
+        if (!next[key]) {
+          const el = document.querySelector('[data-section="' + key + '"]');
+          if (el && el.getBoundingClientRect().top < vh * checks[key]) {
+            next[key] = true;
+            anyChange = true;
+            if (key === 'stats') this.startCount();
+          }
+        }
+      });
+      if (anyChange) this.setState({ revealed: next });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    setTimeout(this._onScroll, 80);
+
+    const lines = this.linesData();
+    this._typeTimer = setInterval(() => {
+      this.setState(s => {
+        if (s.lineIndex >= lines.length) return s;
+        const cur = lines[s.lineIndex];
+        if (s.charIndex < cur.full.length) return { charIndex: s.charIndex + 1 };
+        if (s.lineIndex + 1 < lines.length) return { lineIndex: s.lineIndex + 1, charIndex: 0 };
+        return { lineIndex: s.lineIndex + 1 };
+      });
+    }, 28);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._typeTimer);
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onScroll);
+  }
+
+  startCount() {
+    const targets = [4, 30, 12];
+    const start = Date.now();
+    const dur = 900;
+    const tick = () => {
+      const t = Math.min(1, (Date.now() - start) / dur);
+      this.setState({ statsN: targets.map(n => Math.round(n * t)) });
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  renderVals() {
+    const lines = this.linesData();
+    const termLines = lines.map((ln, i) => {
+      let text = '', showCursor = false;
+      if (i < this.state.lineIndex) text = ln.full;
+      else if (i === this.state.lineIndex) { text = ln.full.slice(0, this.state.charIndex); showCursor = true; }
+      return {
+        prefix: (i <= this.state.lineIndex) ? ln.prefix : '',
+        text, color: ln.color,
+        mt: ln.prefix === '$ ' && i > 0 ? '10px' : '0px',
+        showCursor,
+      };
+    });
+
+    const sy = this.state.scrollY;
+    const statsMeta = [
+      { suffix: '+', label: 'tahun pengalaman' },
+      { suffix: '+', label: 'proyek diselesaikan' },
+      { suffix: '', label: 'teknologi dikuasai' },
+    ];
+    const stats = statsMeta.map((m, i) => ({ display: this.state.statsN[i] + m.suffix, label: m.label }));
+
+    const mk = (name, level) => ({ name, levelLabel: ['dasar','menengah','mahir','ahli'][level-1], levelPct: (level*25) });
+    const groupsRaw = [
+      { title: 'Frontend', color: 'oklch(55% 0.15 150)', items: [mk('React / Next.js',4), mk('TypeScript',4), mk('CSS / Tailwind',4), mk('React Native',3)] },
+      { title: 'Backend', color: 'oklch(60% 0.14 85)', items: [mk('Node.js / Express',4), mk('PostgreSQL',3), mk('REST & GraphQL API',4), mk('Redis',3)] },
+      { title: 'AI & Automasi', color: 'oklch(70% 0.15 55)', items: [mk('LLM API Integration',3), mk('Python',4), mk('Workflow Automation',3), mk('Prompt Engineering',3)] },
+      { title: 'Infra & Tools', color: 'oklch(45% 0.02 85)', items: [mk('Docker',3), mk('AWS',3), mk('CI/CD',3), mk('Git',4)] },
+    ];
+    const skillsOn = this.state.revealed.skills;
+    const skillGroups = groupsRaw.map(g => ({
+      ...g,
+      items: g.items.map(it => ({ ...it, levelPctLive: (skillsOn ? it.levelPct : 0) + '%' })),
+    }));
+
+    const r = this.state.revealed;
+    return {
+      termLines,
+      parallaxSlow: sy * 0.08,
+      parallaxMed: sy * -0.06,
+      parallaxFast: sy * -0.12,
+      scrollRotate: sy * 0.05,
+      scrollRotateRev: -sy * 0.04,
+      heroOpacity: this.state.heroIn ? 1 : 0,
+      heroTranslate: this.state.heroIn ? 0 : 24,
+      scrollCueOpacity: Math.max(0, 1 - sy / 200),
+      tiltX: this.state.tiltX,
+      tiltY: this.state.tiltY,
+      onTermMove: (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width - 0.5;
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        this.setState({ tiltX: py * -8, tiltY: px * 8 });
+      },
+      onTermLeave: () => this.setState({ tiltX: 0, tiltY: 0 }),
+      marqueeItems: ['TypeScript','React','Node.js','Python','PostgreSQL','Docker','AWS','Next.js','React Native','LLM APIs','TypeScript','React','Node.js','Python','PostgreSQL','Docker','AWS','Next.js','React Native','LLM APIs'],
+      stats,
+      statsOpacity: r.stats ? 1 : 0,
+      statsTransform: r.stats ? 0 : 24,
+      aboutOpacity: r.about ? 1 : 0,
+      aboutTransform: r.about ? 0 : 24,
+      skillsOpacity: r.skills ? 1 : 0,
+      skillsTransform: r.skills ? 0 : 24,
+      featuredOpacity: r.featured ? 1 : 0,
+      featuredTransform: r.featured ? 0 : 24,
+      traits: ['problem solver', 'detail-oriented', 'suka automasi', 'team player'],
+      skillGroups,
+      tools: ['VS Code', 'Figma', 'Postman', 'Linear', 'Notion', 'Vercel', 'GitHub Actions', 'Supabase', 'n8n'],
+      education: [
+        { year: '2016–2020', school: 'Universitas Indonesia', degree: 'S.Kom, Teknik Informatika' },
+        { year: '2021', school: 'Dicoding Academy', degree: 'Sertifikasi Backend & Cloud Engineer' },
+      ],
+      featured: [
+        { name: 'Nimbus — Analytics Dashboard', desc: 'Dashboard realtime untuk tim operasional, dibangun dengan React + WebSocket.' },
+        { name: 'Loop AI Assistant', desc: 'Asisten otomasi berbasis LLM untuk tiket support internal.' },
+        { name: 'Pasar Lokal App', desc: 'Aplikasi mobile marketplace UMKM, React Native + Node.js.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
