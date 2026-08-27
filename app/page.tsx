@@ -10,13 +10,15 @@ import { Skills } from '@/components/home/skills';
 import { Education } from '@/components/home/education';
 import { FeaturedProjects } from '@/components/home/featured-projects';
 import { data } from '@/lib/data';
+import { pageMetadata } from '@/lib/page-metadata';
 
 const { profile, seo } = data;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: seo.defaultTitle,
   description: seo.defaultDescription,
-};
+  path: '/',
+});
 
 export default function HomePage() {
   return (
@@ -32,15 +34,17 @@ export default function HomePage() {
           sameAs: [profile.github, profile.linkedin],
         }}
       />
-      <Hero />
-      <Marquee />
-      <div className="max-w-[1100px] mx-auto px-6 pt-16">
-        <Stats />
-        <About />
-        <Skills />
-        <Education />
-        <FeaturedProjects />
-      </div>
+      <main>
+        <Hero />
+        <Marquee />
+        <div className="max-w-[1100px] mx-auto px-6 pt-16">
+          <Stats />
+          <About />
+          <Skills />
+          <Education />
+          <FeaturedProjects />
+        </div>
+      </main>
       <Footer />
     </div>
   );

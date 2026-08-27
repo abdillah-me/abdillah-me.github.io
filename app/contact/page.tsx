@@ -5,19 +5,21 @@ import { TerminalWindow } from '@/components/ui/terminal-window';
 import { Testimonials } from '@/components/contact/testimonials';
 import { ContactForm } from '@/components/contact/contact-form';
 import { data } from '@/lib/data';
+import { pageMetadata } from '@/lib/page-metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Kontak',
   description: `Hubungi ${data.profile.name} untuk kolaborasi, proyek freelance, atau sekadar menyapa.`,
-};
+  path: '/contact',
+});
 
 export default function ContactPage() {
-  const { profile } = data;
+  const { profile, contact } = data;
 
   return (
     <div className="font-sans text-ink min-h-screen flex flex-col">
       <Nav />
-      <div className="flex-1 max-w-[1000px] mx-auto px-6 py-14 w-full">
+      <main className="flex-1 max-w-[1000px] mx-auto px-6 py-14 w-full">
         <div className="font-mono text-sm text-accent-green mb-2">$ cat testimonials.log</div>
         <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-5">/ / kata mereka</h2>
         <Testimonials />
@@ -26,9 +28,7 @@ export default function ContactPage() {
           <div>
             <div className="font-mono text-sm text-accent-green mb-2">$ send --message</div>
             <h1 className="text-[38px] font-bold mb-4 tracking-tight">Mari mengobrol</h1>
-            <p className="text-base leading-relaxed text-ink-dim mb-6">
-              Terbuka untuk kolaborasi, proyek freelance, atau ngobrol soal ide baru. Balas biasanya dalam 1–2 hari kerja.
-            </p>
+            <p className="text-base leading-relaxed text-ink-dim mb-6">{contact.intro}</p>
             <div className="flex flex-col gap-2.5 font-mono text-sm">
               <a href={`mailto:${profile.email}`} className="font-bold">{profile.email}</a>
               <a href={profile.linkedin} target="_blank" rel="noopener" className="text-ink">
@@ -44,7 +44,7 @@ export default function ContactPage() {
             <ContactForm />
           </TerminalWindow>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
