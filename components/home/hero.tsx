@@ -3,11 +3,12 @@
 import { useRef, useState } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { data } from '@/lib/data';
 import { getTypedText } from '@/lib/get-typed-text';
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function Hero() {
   const { profile } = data;
@@ -30,6 +31,19 @@ export function Hero() {
             },
           }
         );
+      });
+
+      // Pause the (otherwise infinitely repeating) typewriter timeline while
+      // the hero is scrolled out of view so it doesn't keep re-rendering at
+      // ~60fps in the background, and resume it once it's visible again.
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: 'top bottom',
+        end: 'bottom top',
+        onLeave: () => tl.pause(),
+        onEnterBack: () => tl.resume(),
+        onEnter: () => tl.resume(),
+        onLeaveBack: () => tl.pause(),
       });
     },
     { scope: containerRef }
