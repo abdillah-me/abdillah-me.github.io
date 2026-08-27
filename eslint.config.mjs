@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Pre-existing design handoff source, not part of the Next.js app:
+    "personal-branding-website-design/**",
   ]),
 ]);
 
