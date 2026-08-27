@@ -1,0 +1,176 @@
+{
+  "profile": {
+    "name": "Raka Pratama",
+    "role": "Software Engineer",
+    "tagline": "Software engineer fullstack yang senang mengubah ide berantakan jadi produk yang jalan. Fokus di web, mobile, dan otomasi berbasis AI.",
+    "location": "Jakarta, Indonesia (remote-friendly)",
+    "email": "hello@rakapratama.dev",
+    "github": "https://github.com/rakapratama",
+    "linkedin": "https://linkedin.com/in/rakapratama",
+    "openToWork": true,
+    "terminalLines": [
+      { "prefix": "$ ", "text": "whoami" },
+      { "prefix": "", "text": "Raka Pratama — Software Engineer" },
+      { "prefix": "$ ", "text": "stack --primary" },
+      { "prefix": "", "text": "TypeScript · React · Node.js · Python" },
+      { "prefix": "$ ", "text": "location" },
+      { "prefix": "", "text": "Jakarta, Indonesia (remote-friendly)" },
+      { "prefix": "$ ", "text": "status" }
+    ]
+  },
+  "stats": [
+    { "value": 4, "suffix": "+", "label": "tahun pengalaman" },
+    { "value": 30, "suffix": "+", "label": "proyek diselesaikan" },
+    { "value": 12, "suffix": "", "label": "teknologi dikuasai" }
+  ],
+  "about": {
+    "paragraphs": [
+      "Saya Raka, software engineer yang mulai belajar coding dari mengutak-atik forum game waktu SMA — dan sampai sekarang belum berhenti penasaran. Sekarang fokus membangun produk web & mobile yang cepat, rapi, dan enak dipakai.",
+      "Beberapa tahun terakhir banyak berkutat dengan sistem yang harus scale, integrasi API yang berantakan, dan belakangan mulai serius eksplorasi automasi berbasis AI untuk mempercepat kerja tim.",
+      "Di luar layar: ngopi, baca komik, dan sesekali nulis di blog soal hal-hal teknis yang baru dipelajari."
+    ],
+    "traits": ["problem solver", "detail-oriented", "suka automasi", "team player"]
+  },
+  "skills": {
+    "groups": [
+      {
+        "title": "Frontend",
+        "color": "oklch(55% 0.15 150)",
+        "items": [
+          { "name": "React / Next.js", "level": 4 },
+          { "name": "TypeScript", "level": 4 },
+          { "name": "CSS / Tailwind", "level": 4 },
+          { "name": "React Native", "level": 3 }
+        ]
+      },
+      {
+        "title": "Backend",
+        "color": "oklch(60% 0.14 85)",
+        "items": [
+          { "name": "Node.js / Express", "level": 4 },
+          { "name": "PostgreSQL", "level": 3 },
+          { "name": "REST & GraphQL API", "level": 4 },
+          { "name": "Redis", "level": 3 }
+        ]
+      },
+      {
+        "title": "AI & Automasi",
+        "color": "oklch(70% 0.15 55)",
+        "items": [
+          { "name": "LLM API Integration", "level": 3 },
+          { "name": "Python", "level": 4 },
+          { "name": "Workflow Automation", "level": 3 },
+          { "name": "Prompt Engineering", "level": 3 }
+        ]
+      },
+      {
+        "title": "Infra & Tools",
+        "color": "oklch(45% 0.02 85)",
+        "items": [
+          { "name": "Docker", "level": 3 },
+          { "name": "AWS", "level": 3 },
+          { "name": "CI/CD", "level": 3 },
+          { "name": "Git", "level": 4 }
+        ]
+      }
+    ],
+    "tools": ["VS Code", "Figma", "Postman", "Linear", "Notion", "Vercel", "GitHub Actions", "Supabase", "n8n"]
+  },
+  "education": [
+    { "year": "2016–2020", "school": "Universitas Indonesia", "degree": "S.Kom, Teknik Informatika" },
+    { "year": "2021", "school": "Dicoding Academy", "degree": "Sertifikasi Backend & Cloud Engineer" }
+  ],
+  "experience": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Vela Teknologi",
+      "location": "Jakarta",
+      "period": "2023 — sekarang",
+      "dotColor": "oklch(55% 0.15 150)",
+      "points": [
+        "Memimpin migrasi monolith ke microservices, menurunkan latency API rata-rata 40%.",
+        "Membangun pipeline automasi berbasis LLM untuk triage tiket support, hemat ~15 jam/minggu tim ops.",
+        "Mentoring 3 engineer junior dan menstandarkan code review process."
+      ],
+      "tags": ["TypeScript", "Node.js", "AWS", "PostgreSQL"]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Nimbus Labs",
+      "location": "Jakarta (remote)",
+      "period": "2021 — 2023",
+      "dotColor": "oklch(60% 0.14 85)",
+      "points": [
+        "Membangun dashboard analytics realtime dipakai 200+ pengguna internal harian.",
+        "Mengembangkan REST & WebSocket API untuk fitur kolaborasi live.",
+        "Menulis test suite yang menaikkan coverage dari 32% ke 78%."
+      ],
+      "tags": ["React", "Express", "WebSocket", "Docker"]
+    },
+    {
+      "role": "Frontend Engineer",
+      "company": "Studio Kecil",
+      "location": "Bandung",
+      "period": "2020 — 2021",
+      "dotColor": "oklch(70% 0.15 55)",
+      "points": [
+        "Membangun 6+ landing page & aplikasi web untuk klien UMKM.",
+        "Menyusun component library internal untuk mempercepat delivery proyek."
+      ],
+      "tags": ["React", "Figma", "Tailwind"]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "company": "Startup Pagi",
+      "location": "Jakarta",
+      "period": "2019 — 2020",
+      "dotColor": "oklch(50% 0.02 85)",
+      "points": [
+        "Membantu membangun fitur checkout untuk aplikasi marketplace UMKM.",
+        "Belajar dasar CI/CD dan code review process di tim produksi."
+      ],
+      "tags": ["JavaScript", "MySQL"]
+    }
+  ],
+  "projects": [
+    { "name": "Nimbus Analytics Dashboard", "category": "web", "desc": "Dashboard realtime untuk tim ops dengan visualisasi live metrics.", "tags": ["React", "WebSocket", "D3"], "image": null, "liveUrl": null, "codeUrl": null, "featured": true },
+    { "name": "Loop AI Assistant", "category": "ai", "desc": "Asisten LLM untuk triage & auto-response tiket support internal.", "tags": ["Python", "OpenAI API", "FastAPI"], "image": null, "liveUrl": null, "codeUrl": null, "featured": true },
+    { "name": "Pasar Lokal App", "category": "mobile", "desc": "Marketplace UMKM dengan katalog, chat, dan pembayaran terintegrasi.", "tags": ["React Native", "Node.js"], "image": null, "liveUrl": null, "codeUrl": null, "featured": true },
+    { "name": "DevFlow CLI", "category": "backend", "desc": "CLI internal untuk scaffolding service baru dalam hitungan detik.", "tags": ["Go", "Cobra"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false },
+    { "name": "Resep Rumahan", "category": "web", "desc": "Platform berbagi resep dengan pencarian berbasis bahan yang ada.", "tags": ["Next.js", "Postgres"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false },
+    { "name": "AutoInvoice", "category": "automation", "desc": "Automasi pembuatan & pengiriman invoice bulanan dari data spreadsheet.", "tags": ["Python", "Zapier", "GCP"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false },
+    { "name": "FitTrack Mobile", "category": "mobile", "desc": "Aplikasi pelacak kebugaran dengan sinkronisasi wearable.", "tags": ["Flutter", "Firebase"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false },
+    { "name": "Kode Bareng", "category": "web", "desc": "Platform belajar coding kolaboratif dengan editor realtime.", "tags": ["React", "Socket.io", "Redis"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false },
+    { "name": "Notif Cerdas", "category": "ai", "desc": "Sistem prioritas notifikasi berbasis machine learning ringan.", "tags": ["Python", "scikit-learn"], "image": null, "liveUrl": null, "codeUrl": null, "featured": false }
+  ],
+  "blog": [
+    { "title": "Belajar dari Migrasi Monolith ke Microservices", "date": "Jun 2026", "excerpt": "Hal-hal yang saya harap tahu sebelum mulai memecah sistem lama jadi service kecil.", "tags": ["backend", "arsitektur"] },
+    { "title": "Membangun Asisten Support dengan LLM di Produksi", "date": "Apr 2026", "excerpt": "Catatan praktis soal prompt, guardrail, dan evaluasi ketika AI menyentuh pelanggan asli.", "tags": ["ai", "produksi"] },
+    { "title": "Kenapa Saya Berhenti Over-engineering Komponen React", "date": "Feb 2026", "excerpt": "Pelajaran soal abstraksi dini yang justru memperlambat tim.", "tags": ["frontend"] },
+    { "title": "Automasi Kecil yang Menghemat 10 Jam Sebulan", "date": "Des 2025", "excerpt": "Script sederhana sering lebih berdampak daripada tool mahal.", "tags": ["automasi"] },
+    { "title": "Panduan Onboarding Engineer Baru ala Tim Kami", "date": "Okt 2025", "excerpt": "Checklist yang kami pakai supaya hari pertama tidak membingungkan.", "tags": ["tim", "proses"] }
+  ],
+  "testimonials": [
+    { "quote": "Raka bikin fitur kompleks kerasa sederhana. Kualitas kode dan komunikasinya konsisten.", "name": "Dewi Anggraini", "role": "Product Manager, Vela Teknologi" },
+    { "quote": "Salah satu engineer paling reliable yang pernah saya kerja sama. Selalu tepat waktu, jarang ada bug lolos.", "name": "Bimo Santoso", "role": "Engineering Lead, Nimbus Labs" },
+    { "quote": "Ide automasinya menghemat waktu tim kami berjam-jam tiap minggu. Sangat direkomendasikan.", "name": "Clara Wijaya", "role": "Ops Manager, Studio Kecil" }
+  ],
+  "footer": {
+    "tagline": "Software engineer di Jakarta. Fullstack, occasionally automasi hal-hal yang tidak seharusnya perlu diotomasi.",
+    "socialLinks": {
+      "github": "https://github.com/rakapratama",
+      "linkedin": "https://linkedin.com/in/rakapratama",
+      "email": "hello@rakapratama.dev"
+    }
+  },
+  "seo": {
+    "siteName": "Raka Pratama — Portfolio",
+    "siteUrl": "https://rakapratama.dev",
+    "defaultTitle": "Raka Pratama — Software Engineer",
+    "defaultDescription": "Software engineer fullstack berbasis di Jakarta, fokus di web, mobile, dan otomasi berbasis AI.",
+    "ogImage": "/images/og-image.png",
+    "twitterHandle": "@rakapratama",
+    "locale": "id_ID",
+    "keywords": ["software engineer", "fullstack developer", "react developer", "next.js developer", "jakarta", "portfolio"]
+  }
+}
