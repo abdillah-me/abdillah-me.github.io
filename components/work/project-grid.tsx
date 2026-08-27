@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Chip } from '@/components/ui/chip';
 import { data } from '@/lib/data';
 import { filterProjects, type ProjectFilter } from '@/lib/filter-projects';
@@ -37,7 +38,11 @@ export function ProjectGrid() {
         {filtered.map((p) => (
           <div key={p.name} className="bg-white border-2 border-ink rounded-lg overflow-hidden flex flex-col">
             <div className="aspect-video bg-cream-dim flex items-center justify-center font-mono text-xs text-ink-dim">
-              screenshot proyek
+              {p.image ? (
+                <Image src={p.image} alt={p.name} width={400} height={250} className="w-full h-full object-cover" />
+              ) : (
+                'screenshot proyek'
+              )}
             </div>
             <div className="p-4.5 flex flex-col flex-1">
               <div className="font-mono text-xs font-bold text-accent-green uppercase mb-1.5">{p.category}</div>
