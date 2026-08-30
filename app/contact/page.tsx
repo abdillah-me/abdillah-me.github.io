@@ -23,8 +23,12 @@ export default function ContactPage() {
         <div className="font-mono text-sm text-accent-green mb-2">$ send --message</div>
         <h1 className="text-[38px] font-bold mb-10 tracking-tight">Mari mengobrol</h1>
 
-        <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-5">/ / kata mereka</h2>
-        <Testimonials />
+        {data.testimonials.length > 0 && (
+          <>
+            <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-5">/ / kata mereka</h2>
+            <Testimonials />
+          </>
+        )}
 
         <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-6">/ / kirim pesan</h2>
         <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-start">

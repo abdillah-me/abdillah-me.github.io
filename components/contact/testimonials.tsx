@@ -1,6 +1,8 @@
 import { data } from '@/lib/data';
 
 export function Testimonials() {
+  if (data.testimonials.length === 0) return null;
+
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4.5 mb-16">
       {data.testimonials.map((t) => (
