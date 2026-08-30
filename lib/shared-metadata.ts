@@ -23,6 +23,5 @@ export const sharedOpenGraph = {
 
 export const sharedTwitter = {
   card: 'summary_large_image' as const,
-  site: seo.twitterHandle,
   images: [OG_IMAGE_PATH],
 };

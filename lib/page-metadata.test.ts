@@ -30,10 +30,9 @@ describe('pageMetadata', () => {
     });
   });
 
-  it('keeps the large-image twitter card and site handle', () => {
+  it('keeps the large-image twitter card', () => {
     expect(subject.twitter).toMatchObject({
       card: 'summary_large_image',
-      site: data.seo.twitterHandle,
       title: 'Kontak',
       images: ['/opengraph-image'],
     });

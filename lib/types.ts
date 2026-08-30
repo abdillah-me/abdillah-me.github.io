@@ -84,7 +84,6 @@ export interface SeoData {
   siteUrl: string;
   defaultTitle: string;
   defaultDescription: string;
-  twitterHandle: string;
   locale: string;
   keywords: string[];
 }
