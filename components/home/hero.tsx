@@ -12,39 +12,55 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function Hero() {
   const { profile } = data;
-  const [lineIndex, setLineIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
+  const lastLine = profile.terminalLines.length - 1;
+  // Start fully typed out. That is what server-rendered HTML and reduced-motion
+  // visitors keep, and the animation below rewinds to the start before its
+  // first paint, so nobody sees the finished text flash by.
+  const [lineIndex, setLineIndex] = useState(lastLine);
+  const [charIndex, setCharIndex] = useState(profile.terminalLines[lastLine].text.length);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
-      profile.terminalLines.forEach((line, i) => {
-        tl.to(
-          {},
-          {
-            duration: line.text.length * 0.028,
-            onUpdate: function () {
-              const progress = this.progress();
-              setLineIndex(i);
-              setCharIndex(Math.round(progress * line.text.length));
-            },
-          }
-        );
+      // Skip the infinite typewriter entirely when the visitor asked for less
+      // motion; matchMedia also tears the timeline back down if the preference
+      // changes while the page is open.
+      const mm = gsap.matchMedia();
+
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        setLineIndex(0);
+        setCharIndex(0);
+
+        const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+        profile.terminalLines.forEach((line, i) => {
+          tl.to(
+            {},
+            {
+              duration: line.text.length * 0.028,
+              onUpdate: function () {
+                const progress = this.progress();
+                setLineIndex(i);
+                setCharIndex(Math.round(progress * line.text.length));
+              },
+            }
+          );
+        });
+
+        // Pause the (otherwise infinitely repeating) typewriter timeline while
+        // the hero is scrolled out of view so it doesn't keep re-rendering at
+        // ~60fps in the background, and resume it once it's visible again.
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          onLeave: () => tl.pause(),
+          onEnterBack: () => tl.resume(),
+          onEnter: () => tl.resume(),
+          onLeaveBack: () => tl.pause(),
+        });
       });
 
-      // Pause the (otherwise infinitely repeating) typewriter timeline while
-      // the hero is scrolled out of view so it doesn't keep re-rendering at
-      // ~60fps in the background, and resume it once it's visible again.
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        onLeave: () => tl.pause(),
-        onEnterBack: () => tl.resume(),
-        onEnter: () => tl.resume(),
-        onLeaveBack: () => tl.pause(),
-      });
+      return () => mm.revert();
     },
     { scope: containerRef }
   );

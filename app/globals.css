@@ -31,3 +31,18 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
+
+/* The marquee, the floating terminal card and the two blink animations all run
+   forever. Honour an explicit reduced-motion preference by letting each one
+   settle on its first frame instead of looping. The GSAP typewriter opts out
+   separately, in components/home/hero.tsx. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

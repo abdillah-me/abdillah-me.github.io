@@ -5,7 +5,7 @@ import { Hero } from './hero';
 describe('Hero', () => {
   it('renders the profile name and tagline from data.json', () => {
     render(<Hero />);
-    expect(screen.getByText(/Raka Pratama/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /Raka Pratama/ })).toBeInTheDocument();
     expect(screen.getByText(/Fokus di web, mobile, dan otomasi berbasis AI/)).toBeInTheDocument();
   });
 
