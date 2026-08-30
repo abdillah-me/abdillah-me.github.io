@@ -9,8 +9,8 @@ describe('SectionHeading', () => {
     expect(screen.getByRole('heading', { name: 'Skill' })).toBeInTheDocument();
   });
 
-  it('does not render an empty h2 when title is omitted', () => {
+  it('promotes the eyebrow to the heading when no title is given, so the section is never unlabelled', () => {
     render(<SectionHeading eyebrow="/ / pendidikan" />);
-    expect(screen.queryByRole('heading')).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: '/ / pendidikan' })).toBeInTheDocument();
   });
 });

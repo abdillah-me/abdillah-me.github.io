@@ -20,14 +20,15 @@ export default function ContactPage() {
     <div className="font-sans text-ink min-h-screen flex flex-col">
       <Nav />
       <main className="flex-1 max-w-[1000px] mx-auto px-6 py-14 w-full">
-        <div className="font-mono text-sm text-accent-green mb-2">$ cat testimonials.log</div>
+        <div className="font-mono text-sm text-accent-green mb-2">$ send --message</div>
+        <h1 className="text-[38px] font-bold mb-10 tracking-tight">Mari mengobrol</h1>
+
         <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-5">/ / kata mereka</h2>
         <Testimonials />
 
+        <h2 className="font-mono text-sm tracking-[0.08em] text-ink-dim uppercase mb-6">/ / kirim pesan</h2>
         <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
           <div>
-            <div className="font-mono text-sm text-accent-green mb-2">$ send --message</div>
-            <h1 className="text-[38px] font-bold mb-4 tracking-tight">Mari mengobrol</h1>
             <p className="text-base leading-relaxed text-ink-dim mb-6">{contact.intro}</p>
             <div className="flex flex-col gap-2.5 font-mono text-sm">
               <a href={`mailto:${profile.email}`} className="font-bold">{profile.email}</a>
