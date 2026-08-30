@@ -26,7 +26,7 @@ describe('pageMetadata', () => {
       siteName: data.seo.siteName,
       title: 'Kontak',
       url: `${data.seo.siteUrl}/contact`,
-      images: ['/opengraph-image'],
+      images: ['/images/og-image.png'],
     });
   });
 
@@ -34,7 +34,7 @@ describe('pageMetadata', () => {
     expect(subject.twitter).toMatchObject({
       card: 'summary_large_image',
       title: 'Kontak',
-      images: ['/opengraph-image'],
+      images: ['/images/og-image.png'],
     });
   });
 });

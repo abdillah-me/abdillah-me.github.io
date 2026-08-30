@@ -2,7 +2,7 @@ import { data } from '@/lib/data';
 
 const { seo } = data;
 
-const OG_IMAGE_PATH = '/opengraph-image';
+const OG_IMAGE_PATH = '/images/og-image.png';
 
 // Next.js merges metadata *shallowly*: a segment that defines `openGraph` or
 // `twitter` replaces the parent's object wholesale instead of merging it field
@@ -10,10 +10,11 @@ const OG_IMAGE_PATH = '/opengraph-image';
 // re-applied by each segment that touches these objects, so keep them here and
 // spread them in both the root layout and `pageMetadata()`.
 //
-// The image is rendered by the `app/opengraph-image.tsx` file convention, but
-// that only attaches itself to its own segment: nested routes that define
-// `openGraph` drop it along with everything else. Pointing at the generated
-// route by path puts it back on every page. `metadataBase` makes it absolute.
+// The image is generated into public/ by scripts/generate-og-image.mjs at
+// prebuild. It lives here rather than behind the app/opengraph-image.tsx file
+// convention because that convention only attaches to its own segment (nested
+// routes that define `openGraph` drop it), and because its static export has
+// no file extension for GitHub Pages to type. `metadataBase` makes it absolute.
 export const sharedOpenGraph = {
   type: 'website' as const,
   locale: seo.locale,
