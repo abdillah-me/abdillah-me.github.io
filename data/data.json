@@ -172,7 +172,6 @@
     "siteUrl": "https://rakapratama.dev",
     "defaultTitle": "Raka Pratama — Software Engineer",
     "defaultDescription": "Software engineer fullstack berbasis di Jakarta, fokus di web, mobile, dan otomasi berbasis AI.",
-    "ogImage": "/images/og-image.svg",
     "twitterHandle": "@rakapratama",
     "locale": "id_ID",
     "keywords": ["software engineer", "fullstack developer", "react developer", "next.js developer", "jakarta", "portfolio"]

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { data } from '@/lib/data';
+import { sharedOpenGraph, sharedTwitter } from '@/lib/shared-metadata';
 
 export function pageMetadata({
   title,
@@ -17,7 +18,7 @@ export function pageMetadata({
     title,
     description,
     alternates: { canonical: path },
-    openGraph: { title, description, url },
-    twitter: { title, description },
+    openGraph: { ...sharedOpenGraph, title, description, url },
+    twitter: { ...sharedTwitter, title, description },
   };
 }

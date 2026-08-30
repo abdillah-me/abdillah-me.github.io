@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { data } from "@/lib/data";
+import { sharedOpenGraph, sharedTwitter } from "@/lib/shared-metadata";
 import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
@@ -24,20 +25,15 @@ export const metadata: Metadata = {
   description: seo.defaultDescription,
   keywords: seo.keywords,
   openGraph: {
-    type: "website",
-    locale: seo.locale,
+    ...sharedOpenGraph,
     url: seo.siteUrl,
-    siteName: seo.siteName,
     title: seo.defaultTitle,
     description: seo.defaultDescription,
-    images: [{ url: seo.ogImage }],
   },
   twitter: {
-    card: "summary_large_image",
-    site: seo.twitterHandle,
+    ...sharedTwitter,
     title: seo.defaultTitle,
     description: seo.defaultDescription,
-    images: [seo.ogImage],
   },
 };
 
