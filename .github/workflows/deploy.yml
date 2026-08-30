@@ -29,6 +29,11 @@ jobs:
 
       - run: npm ci
 
+      # Next writes LayoutProps and friends into .next/types; both that folder
+      # and next-env.d.ts are gitignored, so generate them before typechecking
+      # or tsc cannot resolve the generated route types.
+      - run: npx next typegen
+
       # Fail the deploy on a broken build rather than publishing it.
       - run: npx tsc --noEmit
       - run: npm run lint
