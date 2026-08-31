@@ -5,8 +5,10 @@ export function Footer() {
   const { footer, profile } = data;
   const year = new Date().getFullYear();
 
+  // The extra bottom padding clears the fixed mobile bottom nav; back to the
+  // design's spacing from md up, where that bar is hidden.
   return (
-    <footer className="bg-ink text-cream font-mono px-6 pt-12 pb-7">
+    <footer className="bg-ink text-cream font-mono px-6 pt-12 pb-[84px] md:pb-7">
       <div className="max-w-[1100px] mx-auto flex justify-between gap-8 flex-wrap">
         <div className="max-w-[360px]">
           <div className="font-extrabold text-lg mb-2">
